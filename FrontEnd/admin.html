@@ -11,14 +11,18 @@
 	<link rel="stylesheet" href="./assets/style.css">
 	
 </head>
+
+	<div id="admin-mode">Mode Admin</div>
+	
 <body>
 <header>
+	 
 	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
 	<nav>
 		<ul>
 			<li> <a href="index.html" id="Homelink">projets</a></li>
 			<li> <a href="#">contact </a></li>
-			<li> <a href="log.html" id="LoginLink">login</a></li>
+			<li> <a href="log.html" id="LogoutLink">logout</a></li>
 			<li> <a href="#"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
 		</ul>
 	</nav>
@@ -40,6 +44,65 @@
 	<section id="portfolio">
 	
 		<h2>Mes Projets</h2>
+			<!-- Bouton pour ouvrir la modale -->
+<button id="modifier-galerie">Modifier</button>
+
+<!-- Fenêtre Modale -->
+<div id="modal-galerie" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2 class="modal-title">Galerie Photo</h2>
+    <div class="gallery-container">
+      <!-- Les images de la galerie seront injectées ici -->
+		<div class="gallery-item">
+	  		<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina" class="gallery-image">
+	  	</div>
+	    <div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V" class="gallery-image">
+		</div>
+		<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+			<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba" class="gallery-image">
+		</div>
+		<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+			<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris" class="gallery-image">
+		</div>
+	  	<div class="gallery-item">
+			<span class="delete-icon">&times;</span>
+	  		<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi" class="gallery-image">
+		</div>
+	<button id="ajouter-photo" class="add-button">Ajouter une photo</button>
+  </div>
+</div>
+		
+
 		<!--Ajout tri des projets par categorie-->
 		<section class="tabs">
 			<button data-filter="all">Tous</button>
@@ -116,7 +179,21 @@
 		</ul>
 	</nav>
 </footer>
-<script src="./script.js" ></script>
 
+
+<!-- Modal Structure -->
+<div id="whiteboardModal" class="modal">
+	<div class="modal-content">
+	  <h4>Galerie d'Images</h4>
+	  <div id="imagesContainer">
+		<!-- Les images seront ajoutées ici dynamiquement -->
+	  </div>
+	</div>
+	<div class="modal-footer">
+	  <button class="modal-close">Fermer</button>
+	</div>
+  </div>
+  
+<script src="./script.js" ></script>
 </body>
 </html>
